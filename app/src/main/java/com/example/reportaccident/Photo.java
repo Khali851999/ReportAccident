@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -69,7 +68,7 @@ public class Photo extends AppCompatActivity {
         buttonattach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toActivityMain = new Intent();
+                Intent toActivityMain = new Intent(Photo.this,MainActivity.class);
                 toActivityMain.putExtra("Image1",byteArray1);
                 toActivityMain.putExtra("Image2",byteArray2);
                 toActivityMain.putExtra("Image3",byteArray3);

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int RETURN_FROM_ACTIVITY_PHOTO=31;
 
-    Bitmap Image1,Image2,Image3;
+    Bitmap Img1,Img2,Img3;
     byte[] byteArrayImage1,byteArrayImage2,byteArrayImage3;
 
 
@@ -52,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this,Photo.class);
                 startActivityForResult(intent,RETURN_FROM_ACTIVITY_PHOTO);
-                llclick.setVisibility(View.GONE);
-                llhidden.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -79,16 +78,17 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==RETURN_FROM_ACTIVITY_PHOTO && resultCode==RESULT_OK)
         {
-            byteArrayImage1=getIntent().getByteArrayExtra("Image1");
-            Image1 = BitmapFactory.decodeByteArray(byteArrayImage1, 0, 1);
-            ivhidden1.setImageBitmap(Image1);
-            byteArrayImage2=getIntent().getByteArrayExtra("Image2");
-            Image2 = BitmapFactory.decodeByteArray(byteArrayImage2, 0, 1);
-            ivhidden2.setImageBitmap(Image2);
-            byteArrayImage3=getIntent().getByteArrayExtra("Image3");
-            Image3 = BitmapFactory.decodeByteArray(byteArrayImage3, 0, 1);
-            ivhidden3.setImageBitmap(Image3);
-
+            llclick.setVisibility(View.GONE);
+            llhidden.setVisibility(View.VISIBLE);
+            byteArrayImage1=data.getByteArrayExtra("Image1");
+            Img1 = BitmapFactory.decodeByteArray(byteArrayImage1, 0, byteArrayImage1.length);
+            ivhidden1.setImageBitmap(Img1);
+            byteArrayImage2=data.getByteArrayExtra("Image2");
+            Img2 = BitmapFactory.decodeByteArray(byteArrayImage2, 0, byteArrayImage2.length);
+            ivhidden2.setImageBitmap(Img2);
+            byteArrayImage3=data.getByteArrayExtra("Image3");
+            Img3 = BitmapFactory.decodeByteArray(byteArrayImage3, 0, byteArrayImage3.length);
+            ivhidden3.setImageBitmap(Img3);
         }
     }
 }
