@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvreport"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="Report an Accident"
+        android:padding="5dp"
+        android:layout_marginTop="60dp"/>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="90dp"
+        android:id="@+id/llhidden"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivhidden1"
+            android:src="@mipmap/ic_launcher"
+            android:layout_margin="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivhidden2"
+            android:src="@mipmap/ic_launcher"
+            android:layout_margin="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivhidden3"
+            android:src="@mipmap/ic_launcher"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="90dp"
+        android:id="@+id/llclick">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/ivclick"
+            android:layout_marginRight="40dp"/>
+        <Button
+            android:id="@+id/btnclick"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:text="Click Photo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/lllocation">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/ivlocation"
+            android:layout_marginRight="40dp"/>
+        <Button
+            android:id="@+id/btnlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:text="Location" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/llcontact">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/ivcontact"
+            android:layout_marginRight="40dp"/>
+        <Button
+            android:id="@+id/btncontact"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:text="Contact" />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btnreport"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:text="Report" />
+
+</LinearLayout>
