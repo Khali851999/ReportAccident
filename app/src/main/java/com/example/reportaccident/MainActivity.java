@@ -16,7 +16,8 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnclick,btnlocation,btncontact,btnreport;
+    TextView btnclick,btnlocation,btncontact;
+    Button btnreport;
     ImageView ivclick,ivlocation,ivcontact,ivhidden1,ivhidden2,ivhidden3;
     LinearLayout llclick,lllocation,llcontact,llhidden;
 
@@ -77,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode,Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==RETURN_FROM_ACTIVITY_PHOTO && resultCode==RESULT_OK)
-        {
             llclick.setVisibility(View.GONE);
             llhidden.setVisibility(View.VISIBLE);
             byteArrayImage1=data.getByteArrayExtra("Image1");
@@ -89,6 +89,6 @@ public class MainActivity extends AppCompatActivity {
             byteArrayImage3=data.getByteArrayExtra("Image3");
             Img3 = BitmapFactory.decodeByteArray(byteArrayImage3, 0, byteArrayImage3.length);
             ivhidden3.setImageBitmap(Img3);
-        }
+
     }
 }
