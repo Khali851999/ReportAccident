@@ -73,11 +73,11 @@ public class Photo extends AppCompatActivity {
                     Toast.makeText(Photo.this, "Please Click 3 photos", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Intent toActivityMain = new Intent(Photo.this, MainActivity.class);
-                    toActivityMain.putExtra("Image1", byteArray1);
-                    toActivityMain.putExtra("Image2", byteArray2);
-                    toActivityMain.putExtra("Image3", byteArray3);
-                    setResult(RESULT_OK, toActivityMain);
+                    Intent fromActivityPhoto = new Intent(Photo.this, MainActivity.class);
+                    fromActivityPhoto.putExtra("Image1", byteArray1);
+                    fromActivityPhoto.putExtra("Image2", byteArray2);
+                    fromActivityPhoto.putExtra("Image3", byteArray3);
+                    setResult(RESULT_OK, fromActivityPhoto);
                     Photo.this.finish();
                 }
 
