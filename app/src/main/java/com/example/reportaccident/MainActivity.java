@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView ivclick,ivlocation,ivcontact,ivhidden1,ivhidden2,ivhidden3;
     LinearLayout llclick,lllocation,llcontact,llhiddenPhoto,llhiddenLocation,llhiddencontact;
 
-    private int RETURN_FROM_ACTIVITY_PHOTO=31;
+    private int RETURN_FROM_ACTIVITY_PHOTO=11;
     private int RETURN_FROM_ACTIVTY_MAPS=21;
-    private int RETURN_FROM_ACTIVITY_CALLER_INFO=21;
+    private int RETURN_FROM_ACTIVITY_CALLER_INFO=31;
 
     Bitmap Img1,Img2,Img3;
     byte[] byteArrayImage1,byteArrayImage2,byteArrayImage3;
